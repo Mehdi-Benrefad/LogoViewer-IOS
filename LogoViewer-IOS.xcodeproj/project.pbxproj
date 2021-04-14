@@ -15,6 +15,9 @@
 		4F0AE6062627453A00A57549 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0AE6042627453A00A57549 /* LaunchScreen.storyboard */; };
 		4F0AE6112627453A00A57549 /* LogoViewer_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AE6102627453A00A57549 /* LogoViewer_IOSTests.swift */; };
 		4F0AE61C2627453A00A57549 /* LogoViewer_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AE61B2627453A00A57549 /* LogoViewer_IOSUITests.swift */; };
+		4F0AE62A2627477600A57549 /* LogoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AE6292627477600A57549 /* LogoService.swift */; };
+		4F0AE62B2627477600A57549 /* LogoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AE6292627477600A57549 /* LogoService.swift */; };
+		4F0AE62C2627477600A57549 /* LogoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AE6292627477600A57549 /* LogoService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,7 @@
 		4F0AE6172627453A00A57549 /* LogoViewer-IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LogoViewer-IOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F0AE61B2627453A00A57549 /* LogoViewer_IOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewer_IOSUITests.swift; sourceTree = "<group>"; };
 		4F0AE61D2627453A00A57549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F0AE6292627477600A57549 /* LogoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 				4F0AE5FB2627453600A57549 /* SceneDelegate.swift */,
 				4F0AE5FD2627453600A57549 /* ViewController.swift */,
 				4F0AE5FF2627453600A57549 /* Main.storyboard */,
+				4F0AE6292627477600A57549 /* LogoService.swift */,
 				4F0AE6022627453A00A57549 /* Assets.xcassets */,
 				4F0AE6042627453A00A57549 /* LaunchScreen.storyboard */,
 				4F0AE6072627453A00A57549 /* Info.plist */,
@@ -261,6 +266,7 @@
 			files = (
 				4F0AE5FE2627453600A57549 /* ViewController.swift in Sources */,
 				4F0AE5FA2627453600A57549 /* AppDelegate.swift in Sources */,
+				4F0AE62A2627477600A57549 /* LogoService.swift in Sources */,
 				4F0AE5FC2627453600A57549 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F0AE62B2627477600A57549 /* LogoService.swift in Sources */,
 				4F0AE6112627453A00A57549 /* LogoViewer_IOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F0AE62C2627477600A57549 /* LogoService.swift in Sources */,
 				4F0AE61C2627453A00A57549 /* LogoViewer_IOSUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
