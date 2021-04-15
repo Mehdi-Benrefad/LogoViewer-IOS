@@ -18,6 +18,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        activityIndicator.isHidden=true
+        activityIndicator.startAnimating()
+        
     }
 
     //pour enlever le clavier de l'ecran quand on tappe ailleurs
@@ -34,17 +37,27 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //cette fonction est appelee lors du clic sur le boutton search
     @IBAction func searchAction() {
+        //activityIndicator.isHidden=false
+        //activityIndicator.startAnimating()
+        buttonSearch.isHidden=true
+            activityIndicator.isHidden=false
+            activityIndicator.startAnimating()
         searchLogo()
     }
     
+    //fonction qui effectue la communication avec le modele via le callback et qui permet d'afficher le resultat dans l'ecran de l'utilisateur
     func searchLogo() {
-            guard let domain = textField.text else { return }
-
-            
-            LogoService.shared.getLogo(domain: domain) { (success, data) in
+        //activityIndicator.isHidden=true
+        guard let domain = textField.text else { return }
+        //activityIndicator.isHidden = false
+        //buttonSearch.isHidden = true
+        LogoService.shared.getLogo(domain: domain) { (success, data) in
+            //self.activityIndicator.isHidden = true
+            //self.buttonSearch.isHidden = false
                 if success, let data = data {
+                    //en cas de success
                     self.updateImage(with: data)
-                } else {
+                } else {//en cas d'echec
                     self.presentAlert()
                 }
             }
@@ -55,14 +68,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
         //fonction qui affiche le logo
         private func updateImage(with data: Data) {
+            buttonSearch.isHidden=false
+            activityIndicator.isHidden=true
             self.imageView.image = UIImage(data: data)
         }
 
         //fonction qui affiche une alerte
         private func presentAlert() {
-            let alertVC = UIAlertController(title: "Error", message: "Could not find a logo.", preferredStyle: .alert)
+            let alertVC = UIAlertController(title: "Error", message: "Logo not found.", preferredStyle: .alert)
             alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             present(alertVC, animated: true, completion: nil)
+            buttonSearch.isHidden=false
+            activityIndicator.isHidden=true
         }
 
     }
